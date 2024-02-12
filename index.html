@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="main">
+            <div id="top">
+                Be My Valentine?
+                <div class="buttons">
+                <input type="button" value="Yes" id="y">
+                <input type="button" value="No." id="n">
+                </div>
+            </div>
+            <div id="answer">
+              Deal!
+              <div class="love">Te amo :)</div>
+            </div>
+            </div>
+          <script>
+            var yes = document.getElementById("y");
+            var no = document.getElementById("n");
+
+            no.onmouseover = function() {
+            if(this.value == "No.") {
+                this.value = "Yes";
+                yes.value = "No.";
+            }
+            }
+
+            yes.onmouseover = function() {
+            if(this.value == "No.")
+                this.value = "Yes";
+                no.value = "No.";
+            }
+            function show() {
+                document.getElementById("top").classList.add("fade");
+                document.getElementById("answer").classList.add("fadeIn");
+            }
+            yes.onclick = () => show();
+            no.onclick = () =>  show();
+          </script>
+    </body>
+</html>
